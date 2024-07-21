@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>VBS | Yunx1'world</title><meta name="author" content="yunx1"><meta name="copyright" content="yunx1"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="逆向">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VBS">
+<meta property="og:url" content="http://yunx1.cn/2024/07/21/VBS/index.html">
+<meta property="og:site_name" content="Yunx1&#39;world">
+<meta property="og:description" content="逆向">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yunx1.cn/abbreviation/%E9%AC%BC%E5%88%80-6.jpg">
+<meta property="article:published_time" content="2024-07-21T06:41:23.326Z">
+<meta property="article:modified_time" content="2024-07-21T06:56:19.486Z">
+<meta property="article:author" content="yunx1">
+<meta property="article:tag" content="逆向">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yunx1.cn/abbreviation/%E9%AC%BC%E5%88%80-6.jpg"><link rel="shortcut icon" href="/images/slef.png"><link rel="canonical" href="http://yunx1.cn/2024/07/21/VBS/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'VBS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-07-21 14:56:19'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><span id="fps"></span><link rel="stylesheet" href="/css/nav_menu.css"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_4624737_l3k27b3d0o.css"><link rel="stylesheet" href="/css/modify.css"><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/self.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-bangbangtang-01"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-baomihua-01"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-bingqilin-01"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-kele-01"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-paobing-01"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/abbreviation/%E9%AC%BC%E5%88%80-6.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Yunx1'world"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/self.png"/><span class="site-name">Yunx1'world</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-bangbangtang-01"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-baomihua-01"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-bingqilin-01"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-kele-01"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-paobing-01"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">VBS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-21T06:41:23.326Z" title="发表于 2024-07-21 14:41:23">2024-07-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-21T06:56:19.486Z" title="更新于 2024-07-21 14:56:19">2024-07-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%80%86%E5%90%91/">逆向</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="VBS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1MK8tf3wR17MAwr23aXV7Jw">原题链接</a><br>提取码：1234 </p>
+<p>这是vbs混淆，首先我们打开vs studio，打开调试-&gt;选项-&gt;实时，把脚本选项打开</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407210946058.png" alt="image-20240721094623995"></p>
+<p>win+R，wscript &#x2F;X +文件路径，这里是我的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wscript /X D:\赛题\赛题\HNCTF\Reverse\Baby_OBVBS\Baby_OBVBS\Baby_OBVBS.vbs</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211100889.png" alt="image-20240721110049852"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211323528.png" alt="image-20240721110118287"></p>
+<p>再点击vs studio是这种显示</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211124554.png" alt="image-20240721112448494"></p>
+<p>ctrl+a全选复制到记事本</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211128036.png" alt="image-20240721112854990"></p>
+<p>这是vbs混淆，通过脚本来解决</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Option Explicit</span><br><span class="line"> </span><br><span class="line">Function Defuscator(vbs)</span><br><span class="line">	Dim t</span><br><span class="line">	t = InStr(1, vbs, &quot;Execute&quot;, 1)</span><br><span class="line">	t = Mid(vbs, t + Len(&quot;Execute&quot;)) </span><br><span class="line">	t = Eval(t)</span><br><span class="line">	Defuscator = t</span><br><span class="line">End Function</span><br><span class="line"> </span><br><span class="line">Dim fso, i</span><br><span class="line">Const ForReading = 1</span><br><span class="line">Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)</span><br><span class="line">For i = 0 To WScript.Arguments.Count - 1 </span><br><span class="line">	Dim FileName</span><br><span class="line">	FileName = WScript.Arguments(i)</span><br><span class="line">	Dim MyFile</span><br><span class="line">	Set MyFile = fso.OpenTextFile(FileName, ForReading)</span><br><span class="line">	Dim vbs</span><br><span class="line">	vbs = MyFile.ReadAll	</span><br><span class="line">	WScript.Echo Defuscator(vbs)</span><br><span class="line">	MyFile.Close</span><br><span class="line">Next</span><br><span class="line"> </span><br><span class="line">Set fso = Nothing</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">这段VBScript代码定义了一个名为Defuscator的函数，其主要功能是读取并执行来自其他VBScript文件中的特定代码段。下面是对整个脚本的详细解释：</span><br><span class="line"></span><br><span class="line">    一、Option Explicit: 这一行声明要求在使用变量之前必须显式声明它们，以避免因拼写错误或未初始化的变量而引起的错误。</span><br><span class="line"></span><br><span class="line">    二、Defuscator Function: 定义了一个名为Defuscator的函数，它接受一个参数vbs（预期是一个包含VBScript代码的字符串）。</span><br><span class="line">        1.使用InStr(1, vbs, &quot;Execute&quot;, 1)查找&quot;Execute&quot;第一次出现的位置。这通常用于定位嵌入在输入字符串中的特定命令或模式。</span><br><span class="line">        2.Mid(vbs, t + Len(&quot;Execute&quot;))从&quot;Execute&quot;之后的字符开始截取字符串，假设之后的内容是要执行的VBScript代码。</span><br><span class="line">        3.Eval(t)函数会计算并执行截取出的字符串t作为VBScript代码。这是一种动态执行代码的方式，非常灵活但也可能引入安全风险。</span><br><span class="line">        4.最后，Defuscator函数返回执行结果。</span><br><span class="line"></span><br><span class="line">    三、文件操作部分:</span><br><span class="line">        1.通过Dim fso, i声明了两个变量，fso用于文件系统操作，i用于循环计数。</span><br><span class="line">        2.Const ForReading = 1定义了一个常量，表示以只读模式打开文件。</span><br><span class="line">        3.使用CreateObject(&quot;Scripting.FileSystemObject&quot;)创建一个FileSystemObject实例，允许进行文件和目录操作。</span><br><span class="line">        4.通过WScript.Arguments.Count遍历命令行传入的所有参数（这些参数应该是文件名）。</span><br><span class="line">        5.对于每个参数（即每个文件名），打开文件，读取所有内容到变量vbs中。</span><br><span class="line">        6.调用Defuscator(vbs)函数来执行读取到的VBScript代码，并通过WScript.Echo输出执行结果。</span><br><span class="line">        7.读取完成后关闭文件。</span><br><span class="line"></span><br><span class="line">    四、清理: Set fso = Nothing释放对FileSystemObject实例的引用，这是良好编程习惯，有助于及时释放资源。</span><br><span class="line"></span><br><span class="line">总结来说，这段脚本设计用于读取一系列指定的VBScript文件，寻找并执行其中以&quot;Execute&quot;关键字开始的代码段，然后打印出执行结果。这种类型的脚本可能用于处理或分析已编码或混淆的VBScript代码，但同时也需要注意，直接执行未经检查的代码存在安全隐患</span><br></pre></td></tr></table></figure>
+
+<p>将脚本保存到记事本内并命名为defuscator.vbs，和该题放到同一目录下</p>
+<p>在该目录下打开终端，执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript defuscator.vbs Baby_OBVBS.vbs</span><br></pre></td></tr></table></figure>
+
+<p>显示结果</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211337765.png" alt="image-20240721133723716"></p>
+<p>将显示的内容粘贴到记事本以方便观看</p>
+<p>每一段base后都是一段代码，分别破解后保存下来</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211340070.png" alt="image-20240721133959978"></p>
+<p>再次保存下来的代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">eAqi = &quot;59fc6b263c3d0fcbc331ade699e62d3473bbf85522d588e3423e6c751ca091528a3c0186e460483917192c14&quot;</span><br><span class="line">ANtg = &quot;baacc7ffa8232d28f814bb14c428798b&quot;</span><br><span class="line">Function Base64Decode(base64EncodedString)</span><br><span class="line">    Dim xml, elem</span><br><span class="line">    Set xml = CreateObject(&quot;MSXML2.DOMDocument&quot;)</span><br><span class="line">    Set elem = xml.createElement(&quot;tmp&quot;)</span><br><span class="line">    elem.dataType = &quot;bin.base64&quot;</span><br><span class="line">    elem.text = base64EncodedString</span><br><span class="line">    Dim stream</span><br><span class="line">    Set stream = CreateObject(&quot;ADODB.Stream&quot;)</span><br><span class="line">    stream.Type = 1 &#x27;Binary</span><br><span class="line">    stream.Open</span><br><span class="line">    stream.Write elem.nodeTypedValue</span><br><span class="line">    stream.Position = 0</span><br><span class="line">    stream.Type = 2 &#x27;Text</span><br><span class="line">    stream.Charset = &quot;utf-8&quot;</span><br><span class="line">    Base64Decode = stream.ReadText</span><br><span class="line">    stream.Close</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">Function Initialize(strPwd)</span><br><span class="line">    Dim box(256)</span><br><span class="line">    Dim tempSwap</span><br><span class="line">    Dim a</span><br><span class="line">    Dim b</span><br><span class="line"></span><br><span class="line">    For i = 0 To 255</span><br><span class="line">        box(i) = i</span><br><span class="line">    Next</span><br><span class="line"></span><br><span class="line">    a = 0</span><br><span class="line">    b = 0</span><br><span class="line"></span><br><span class="line">    For i = 0 To 255</span><br><span class="line">        a = (a + box(i) + Asc(Mid(strPwd, (i Mod Len(strPwd)) + 1, 1))) Mod 256</span><br><span class="line">        tempSwap = box(i)</span><br><span class="line">        box(i) = box(a)</span><br><span class="line">        box(a) = tempSwap</span><br><span class="line">    Next</span><br><span class="line"></span><br><span class="line">    Initialize = box</span><br><span class="line">End Function</span><br><span class="line">Function Myfunc(strToHash)</span><br><span class="line">    Dim tmpFile, strCommand, objFSO, objWshShell, out</span><br><span class="line">    Set objFSO = CreateObject(&quot;Scripting.FileSystemObject&quot;)</span><br><span class="line">    Set objWshShell = CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">    tmpFile = objFSO.GetSpecialFolder(2).Path &amp; &quot;\&quot; &amp; objFSO.GetTempName</span><br><span class="line">    objFSO.CreateTextFile(tmpFile).Write(strToHash)</span><br><span class="line">    strCommand = &quot;certutil -hashfile &quot; &amp; tmpFile &amp; &quot; MD5&quot;</span><br><span class="line">    out = objWshShell.Exec(strCommand).StdOut.ReadAll</span><br><span class="line">    objFSO.DeleteFile tmpFile</span><br><span class="line">    Myfunc = Replace(Split(Trim(out), vbCrLf)(1), &quot; &quot;, &quot;&quot;)</span><br><span class="line">End Function</span><br><span class="line">Function EnCrypt(box, strData)</span><br><span class="line">    Dim tempSwap</span><br><span class="line">    Dim a</span><br><span class="line">    Dim b</span><br><span class="line">    Dim x</span><br><span class="line">    Dim y</span><br><span class="line">    Dim encryptedData</span><br><span class="line">    encryptedData = &quot;&quot;</span><br><span class="line">    For x = 1 To Len(strData)</span><br><span class="line">        a = (a + 1) Mod 256</span><br><span class="line">        b = (b + box(a)) Mod 256</span><br><span class="line">        tempSwap = box(a)</span><br><span class="line">        box(a) = box(b)</span><br><span class="line">        box(b) = tempSwap</span><br><span class="line">        y = Asc(Mid(strData, x, 1)) Xor box((box(a) + box(b)) Mod 256)</span><br><span class="line">        encryptedData = encryptedData &amp; LCase(Right(&quot;0&quot; &amp; Hex(y), 2))</span><br><span class="line">    Next</span><br><span class="line">    EnCrypt = encryptedData</span><br><span class="line">End Function</span><br><span class="line">msgbox &quot;Do you know VBScript?&quot;</span><br><span class="line">msgbox &quot;VBScript (&quot;&quot;Microsoft Visual Basic Scripting Edition&quot;&quot;) is a deprecated Active Scripting language developed by Microsoft that is modeled on Visual Basic.&quot;</span><br><span class="line">msgbox &quot;It allows Microsoft Windows system administrators to generate powerful tools for managing computers without error handling and with subroutines and other advanced programming constructs. It can give the user complete control over many aspects of their computing environment.&quot;</span><br><span class="line">msgbox &quot;Interestingly, although VBScript has long since been deprecated, you can still run VBScript scripts on the latest versions of Windows 11 systems.&quot;</span><br><span class="line">msgbox &quot;A VBScript script must be executed within a host environment, of which there are several provided with Microsoft Windows, including: Windows Script Host (WSH), Internet Explorer (IE), and Internet Information Services (IIS).&quot;</span><br><span class="line">msgbox &quot;For .vbs files, the host is Windows Script Host (WSH), aka wscript.exe/cscript.exe program in your system.&quot;</span><br><span class="line">msgbox &quot;If you can not stop a VBScript from running (e.g. a dead loop), go to the task manager and kill wscript.exe/cscript.exe.&quot;</span><br><span class="line">msgbox &quot;cscript and wscript are executables for the scripting host that are used to run the scripts. cscript and wscript are both interpreters to run VBScript (and other scripting languages like JScript) on the Windows platform.&quot;</span><br><span class="line">msgbox &quot;cscript is for console applications and wscript is for Windows applications. It has something to do with STDIN, STDOUT and STDERR.&quot;</span><br><span class="line">msgbox &quot;OK! Now, let us begin our journey.&quot;</span><br><span class="line"></span><br><span class="line">key = InputBox(&quot;Enter the key:&quot;, &quot;CTF Challenge&quot;)</span><br><span class="line">if (key = False) then wscript.quit</span><br><span class="line">if (len(key)&lt;&gt;6) then</span><br><span class="line">    wscript.echo &quot;wrong key length!&quot;</span><br><span class="line">    wscript.quit</span><br><span class="line">end if</span><br><span class="line">If (Myfunc(key) = ANtg) Then</span><br><span class="line">    wscript.echo &quot;You get the key!Move to next challenge.&quot;</span><br><span class="line">Else</span><br><span class="line">    wscript.echo &quot;Wrong key!Try again!&quot;</span><br><span class="line">    wscript.quit</span><br><span class="line">End If</span><br><span class="line"></span><br><span class="line">userInput = InputBox(&quot;Enter the flag:&quot;, &quot;CTF Challenge&quot;)</span><br><span class="line">if (userInput = False) then wscript.quit</span><br><span class="line">if (len(userInput)&lt;&gt;44) then</span><br><span class="line">    wscript.echo &quot;wrong!&quot;</span><br><span class="line">    wscript.quit</span><br><span class="line">end if</span><br><span class="line">box = Initialize(key)</span><br><span class="line">encryptedInput = EnCrypt(box, userInput)</span><br><span class="line"></span><br><span class="line">If (encryptedInput = eAqi) Then</span><br><span class="line">    MsgBox &quot;Congratulations! You have learned VBS!&quot;</span><br><span class="line">Else</span><br><span class="line">    MsgBox &quot;Wrong flag. Try again.&quot;</span><br><span class="line">End If</span><br><span class="line"></span><br><span class="line">wscript.echo &quot;bye!&quot;</span><br></pre></td></tr></table></figure>
+
+<p>开头的ANtg在下面一段中找到了</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211344113.png" alt="image-20240721134422080"></p>
+<p>Myfun就是md5</p>
+<p><a target="_blank" rel="noopener" href="https://www.somd5.com/">md5在线解密破解</a></p>
+<p>解密的结果是： H&amp;NKEY</p>
+<p>RC4解密得出结果</p>
+<p>H&amp;NCTF{VBS_1s_@_s0_7unny_an4_pow3rfu1_t00l!}</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://typora-picture-of-yunxi.oss-cn-beijing.aliyuncs.com/img/202407211434557.png" alt="image-20240721143432511"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://yunx1.cn">yunx1</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://yunx1.cn/2024/07/21/VBS/">http://yunx1.cn/2024/07/21/VBS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yunx1.cn" target="_blank">Yunx1'world</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%80%86%E5%90%91/">逆向</a></div><div class="post_share"><div class="social-share" data-image="/abbreviation/%E9%AC%BC%E5%88%80-6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/07/17/%E8%8A%B1%E6%8C%87%E4%BB%A4%E8%84%9A%E6%9C%AC/" title="花指令脚本"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/abbreviation/%E9%AC%BC%E5%88%80-5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">花指令脚本</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/07/17/%E8%8A%B1%E6%8C%87%E4%BB%A4%E8%84%9A%E6%9C%AC/" title="花指令脚本"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/abbreviation/%E9%AC%BC%E5%88%80-5.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-17</div><div class="title">花指令脚本</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/self.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">yunx1</div><div class="author-info__description">二进制ing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn"><i class="fab fa-github"></i><span>来github看看呗</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="/images/weixin.jpg" target="_blank" title="作者微信"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="/images/qq.jpg" target="_blank" title="作者QQ"><i class="iconfont icon-QQ"></i></a><a class="social-icon" href="https://www.bilibili.com/" target="_blank" title="累了?看会B站吧!"><i class="iconfont icon-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div id="welcome-info"></div><div class="item-headline"><span>公告</span></div><div class="announcement_content"><center><h3><font color="#00FFFF">Reverse World!!!</font></h3><br><b><font color="#a591e0">求大佬带带ヾ(๑╹ヮ╹๑)ﾉ”</font></b><br><br><b><font color="#FF0000"></font></b></center></div></div><div class="sticky_layout"></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">座右铭</p><div class="bg-ad"><div>路不铲不平，事不为不成</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://www.bilibili.com/">点击开启B站学习之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t"> </p><ul class="ft-links"></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链<(｀^′)> </p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://zhang-blogs.cn/" title="zhang的小屋"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/link/zhang-1.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://z0yuan.cn/" title="z0yuan"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/link/z0yuan-1.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://w0dao.cn/" title="w0dao"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/link/w0dao-1.jpg" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2024</b></span><span><b>&nbsp;&nbsp;By yunx1</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-hexo-%230E83CD?logo=hexo&amp;logoColor=%230E83CD&amp;color=%230E83CD" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.13.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-butterfly-%237952B3?logo=buefy&amp;logoColor=%230AC18E&amp;color=%237952B3" alt=""/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/recordQuery" style="margin-inline:5px" title="本站已备案,豫ICP备2024070474号-1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/%E8%B1%ABICP%E5%A4%872024070474%E5%8F%B7-%23CA2133?logo=metasploit&amp;logoColor=%230014FF&amp;color=%23CA2133" alt=""/></a><a class="github-badge" target="_blank" href="https://cn.aliyun.com/" style="margin-inline:5px" title="本站数据存储在阿里云OSS上"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Bucket-%E9%98%BF%E9%87%8C%E4%BA%91-%230052CC?logo=bitbucket&amp;logoColor=%234AB367&amp;color=%234AB367" alt=""/></a><a class="github-badge" target="_blank" href="https://cn.aliyun.com/" style="margin-inline:5px" title="本站使用阿里云提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-%E9%98%BF%E9%87%8C%E4%BA%91-%230052CC?logo=keycdn&amp;logoColor=%23FE5196&amp;color=%23FF7328" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.zhang-blogs.cn/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.zhang-blogs.cn/',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.31/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="/js/sun_moon.js" async></script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script>new LingQue.Monitor().init({id:"3J4F0UjXjJMKJE8b"});</script><script defer src="/js/runtime.js"></script><script async src="/js/title.js"></script><script async src="/js/fps.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async data-pjax src="/js/txmap.js"></script>//at.alicdn.com/t/c/font_4624737_l3k27b3d0o.css<script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/17/花指令脚本/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/abbreviation/鬼刀-5.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-17</span><a class="blog-slider__title" href="2024/07/17/花指令脚本/" alt="">花指令脚本</a><div class="blog-slider__text">逆向</div><a class="blog-slider__button" href="2024/07/17/花指令脚本/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/17/base64脚本/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/abbreviation/鬼刀-3.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-17</span><a class="blog-slider__title" href="2024/07/17/base64脚本/" alt="">base64脚本</a><div class="blog-slider__text">密码</div><a class="blog-slider__button" href="2024/07/17/base64脚本/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/15/windows rust安装全教程（保姆级）/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/abbreviation/鬼刀-4.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-15</span><a class="blog-slider__title" href="2024/07/15/windows rust安装全教程（保姆级）/" alt="">Windows rust安装全教程(保姆级)</a><div class="blog-slider__text">rust语言学习</div><a class="blog-slider__button" href="2024/07/15/windows rust安装全教程（保姆级）/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/21/VBS/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/abbreviation/鬼刀-6.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-21</span><a class="blog-slider__title" href="2024/07/21/VBS/" alt="">VBS</a><div class="blog-slider__text">逆向</div><a class="blog-slider__button" href="2024/07/21/VBS/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/17/AES/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/abbreviation/鬼刀-2.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-17</span><a class="blog-slider__title" href="2024/07/17/AES/" alt="">AES</a><div class="blog-slider__text">密码</div><a class="blog-slider__button" href="2024/07/17/AES/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
